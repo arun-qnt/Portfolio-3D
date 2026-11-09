@@ -1,0 +1,121 @@
+/* ==========================================================================
+   ANIMATIONS & ATMOSPHERIC SMOKE CHOREOGRAPHY (css/animations.css)
+   Respects prefers-reduced-motion accessibility settings
+   ========================================================================== */
+
+@keyframes loaderProgress {
+  0% {
+    transform: scaleX(0.05);
+  }
+  50% {
+    transform: scaleX(0.75);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes smokeDrift1 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(4vw, 3vh, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-3vw, 6vh, 0) scale(0.96);
+  }
+}
+
+@keyframes smokeDrift2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-5vw, -4vh, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(3vw, -2vh, 0) scale(0.95);
+  }
+}
+
+@keyframes smokeDrift3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.96);
+  }
+  50% {
+    transform: translate3d(3vw, -3vh, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(-4vw, 4vh, 0) scale(1.02);
+  }
+}
+
+/* Staggered Character Typography in Hero */
+.char-stagger {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--char-index, 0) * 45ms + 120ms);
+}
+
+body.is-loaded .char-stagger {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glass Panel & Card Reveal Animations */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.62s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--stagger-delay, 0ms);
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Progressive Project Cards Reveal */
+.project-card {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.project-card.is-revealed,
+.project-card.is-visible {
+  opacity: 1;
+  transform: perspective(900px) rotateX(var(--tilt-rx, 0deg)) rotateY(var(--tilt-ry, 0deg)) translateY(0);
+}
+
+/* Synchronized Pull-Down Résumé Card in Section 06 */
+#resume-pull-card {
+  transform: translateY(calc((1 - var(--pull-progress, 1)) * -22px));
+  transition: transform 0.25s ease-out, opacity 0.45s ease;
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-item,
+  .project-card,
+  .char-stagger,
+  .skill-detail-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

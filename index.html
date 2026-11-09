@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arun S — Associate Software Engineer &amp; Full-Stack Developer</title>
+  <meta
+    name="description"
+    content="Portfolio of Arun S, Associate Software Engineer & Full-Stack Developer in Chennai specializing in Vue.js (Vuetify 2 & 3), Nuxt.js, Golang, ServiceNow (ITSM), SQL (MariaDB), DynamoDB, AWS, Web App Hosting, and SEO."
+  />
+  <meta
+    name="keywords"
+    content="Arun S, Associate Software Engineer, Software Developer, Full-Stack Developer, Vue.js, Vuetify, Nuxt.js, Golang, ServiceNow ITSM, SQL, MariaDB, DynamoDB, AWS Lambda, Web App Hosting, SEO, Chennai"
+  />
+  <meta name="author" content="Arun S" />
+  <meta name="theme-color" content="#F8FAFF" />
+
+  <!-- Preload Poster & Uniform Typography (Plus Jakarta Sans across all weights & italic styles) -->
+  <link rel="preload" as="image" href="assets/images/poster.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-active-scene="intro">
+
+  <!-- ==================================================
+       INITIAL LIQUID GLASS LOADING SCREEN
+       ================================================== -->
+  <div id="page-loader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-glass-card">
+      <div class="loader-badge">AS</div>
+      <div class="loader-monogram">ARUN S</div>
+      <div class="loader-subtitle">Initializing Cinematic Glass Experience</div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================
+       ATMOSPHERIC FLOWING SMOKE & PARALLAX LAYER
+       ================================================== -->
+  <div id="smoke-atmosphere" class="smoke-atmosphere" aria-hidden="true">
+    <div class="smoke-plume smoke-plume-1" data-parallax-speed="0.04"></div>
+    <div class="smoke-plume smoke-plume-2" data-parallax-speed="-0.06"></div>
+    <div class="smoke-plume smoke-plume-3" data-parallax-speed="0.08"></div>
+    <div class="smoke-plume smoke-plume-4" data-parallax-speed="-0.05"></div>
+    <div class="smoke-plume smoke-plume-5" data-parallax-speed="0.03"></div>
+  </div>
+
+  <!-- ==================================================
+       FLOATING LIQUID GLASS NAVBAR
+       ================================================== -->
+  <header class="floating-header" role="banner">
+    <div class="scroll-progress-track" aria-hidden="true">
+      <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+    </div>
+
+    <div class="floating-nav-shell">
+      <a href="#section-intro" class="brand-logo" data-scroll-to="intro" aria-label="Arun S Home">
+        <span class="brand-monogram">AS</span>
+        <span class="brand-text">ARUN S</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <a href="#section-intro" class="nav-link is-active" data-section="intro" data-scroll-to="intro">Home</a>
+        <a href="#section-about" class="nav-link" data-section="about" data-scroll-to="about">About</a>
+        <a href="#section-experience" class="nav-link" data-section="experience" data-scroll-to="experience">Experience</a>
+        <a href="#section-projects" class="nav-link" data-section="projects" data-scroll-to="projects">Projects</a>
+        <a href="#section-skills" class="nav-link" data-section="skills" data-scroll-to="skills">Skills</a>
+        <a href="#resume-pull-card" class="nav-link" data-section="resume" data-scroll-to="resume">Résumé</a>
+        <a href="#section-contact" class="nav-link" data-section="contact" data-scroll-to="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#section-contact" data-scroll-to="contact" class="btn btn-sm btn-accent nav-cta-btn">
+          <span>Let's Talk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile & Tablet Floating Glass Dropdown Navigation -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <div class="mobile-nav-links">
+        <a href="#section-intro" class="mobile-nav-link" data-scroll-to="intro">01. Home</a>
+        <a href="#section-about" class="mobile-nav-link" data-scroll-to="about">02. About &amp; Education</a>
+        <a href="#section-experience" class="mobile-nav-link" data-scroll-to="experience">03. Experience</a>
+        <a href="#section-projects" class="mobile-nav-link" data-scroll-to="projects">04. Selected Projects</a>
+        <a href="#section-skills" class="mobile-nav-link" data-scroll-to="skills">05. Technical Skills</a>
+        <a href="#resume-pull-card" class="mobile-nav-link" data-scroll-to="resume">06. Résumé Showcase</a>
+        <a href="#section-contact" class="mobile-nav-link" data-scroll-to="contact">07. Contact</a>
+        <div class="mobile-drawer-actions">
+          <a href="#section-contact" data-scroll-to="contact" class="btn btn-primary mobile-drawer-cta">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================================================
+       CINEMATIC CHARACTER VIDEO STAGE
+       (Split-screen on Desktop, Full-Screen 100vw × 100dvh on Mobile/Tablet)
+       ================================================== -->
+  <div id="video-stage" class="video-stage" aria-hidden="true">
+    <div id="video-stage-inner" class="video-stage-inner">
+      <video
+        id="character-video"
+        class="character-video"
+        src="assets/videos/portfolio-master.mp4?v=2"
+        poster="assets/images/poster.jpg"
+        preload="auto"
+        muted
+        playsinline
+        webkit-playsinline
+      ></video>
+      <!-- Atmospheric studio edge blend into #F8FAFF & floating smoke -->
+      <div class="video-studio-mask"></div>
+    </div>
+  </div>
+
+  <!-- Right-Edge Scene Progress Dots (Desktop) -->
+  <aside class="stage-dots-nav" aria-label="Scene Progress">
+    <button type="button" class="stage-dot is-active" data-section="intro" data-scroll-to="intro" aria-label="Scene 1: Introduction"></button>
+    <button type="button" class="stage-dot" data-section="about" data-scroll-to="about" aria-label="Scene 2: About & Education"></button>
+    <button type="button" class="stage-dot" data-section="experience" data-scroll-to="experience" aria-label="Scene 3: Professional Experience"></button>
+    <button type="button" class="stage-dot" data-section="projects" data-scroll-to="projects" aria-label="Scene 4: Selected Projects"></button>
+    <button type="button" class="stage-dot" data-section="skills" data-scroll-to="skills" aria-label="Scene 5: Technical Skills"></button>
+    <button type="button" class="stage-dot" data-section="contact" data-scroll-to="contact" aria-label="Scene 6: Résumé and Contact"></button>
+  </aside>
+
+  <!-- ==================================================
+       MAIN SCROLLABLE STORYTELLING CONTAINER
+       ================================================== -->
+  <main class="portfolio-main" id="portfolio-main">
+
+    <!-- ================================================
+         SECTION 01 – INTRODUCTION (Clip 1: Turns Towards Camera)
+         Desktop: Character on Right, Liquid Glass Hero Panel on Left
+         Mobile/Tablet: Full-Screen Video with Top Safe Window & Floating Glass Panel
+         ================================================ -->
+    <section id="section-intro" class="portfolio-section section-align-left is-current-section" data-section-id="intro">
+      <div class="mobile-character-window" aria-hidden="true"></div>
+      <div class="section-viewport-track">
+        <div class="content-column content-column-hero">
+          <div class="glass-panel hero-card reveal-item is-visible" data-tilt-card>
+            <div class="status-pill-row">
+              <span class="status-pulse"></span>
+              <span class="status-pill-text">Associate Software Engineer @ Ensono Technologies</span>
+            </div>
+
+            <div class="eyebrow-row">
+              <span class="section-index">01</span>
+              <span class="eyebrow-divider"></span>
+              <p class="eyebrow-text">HELLO, I'M</p>
+            </div>
+
+            <h1 id="hero-stagger-name" class="hero-name" aria-label="ARUN S">ARUN S</h1>
+
+            <p class="hero-role">Associate Software Engineer &amp; Full-Stack Developer</p>
+
+            <p class="hero-headline">
+              Engineering resilient systems &amp; refined interfaces. Building scalable enterprise workflows, resilient Golang services, and refined Vue.js interfaces.
+            </p>
+
+            <p class="hero-supporting">
+              Motivated Electronics and Communication Engineer with 20 months of hands-on experience as a Software Developer and Associate Software Engineer. Adept at building scalable and efficient applications using modern technologies including ServiceNow (ITSM), Vue.js (Vuetify 2 &amp; 3), Nuxt.js, Golang, SQL, DynamoDB, Angular.js and AWS tools.
+            </p>
+
+            <!-- Engineering Architecture Mini-Pills (from published website) -->
+            <div id="hero-architecture-grid" class="architecture-mini-grid" aria-label="Engineering Architecture Domains"></div>
+
+            <div class="hero-cta-group">
+              <a href="#section-projects" data-scroll-to="projects" class="btn btn-primary">
+                <span>Explore My Work</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+              <a href="#section-contact" data-scroll-to="contact" class="btn btn-glass">
+                <span>Get in Touch</span>
+              </a>
+            </div>
+
+            <div class="hero-social-row" aria-label="Social and Direct Contact Links">
+              <a href="https://www.linkedin.com/in/aruns9679" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/arun-qnt" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="mailto:its.arun.s0503@gmail.com" class="social-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>its.arun.s0503@gmail.com</span>
+              </a>
+              <a href="tel:+917708094885" class="social-pill">
+                <span>+91 77080 94885</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4 Key Metrics Strip -->
+          <div id="about-stats-grid" class="metrics-glass-strip reveal-item" aria-label="Key Career Metrics"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 02 – ABOUT, CAPABILITIES & EDUCATION (Clip 2: Walks Towards Camera)
+         Desktop: Character on Left, Floating Glass Layout on Right
+         ================================================ -->
+    <section id="section-about" class="portfolio-section section-align-right" data-section-id="about">
+      <div class="mobile-character-window" aria-hidden="true"></div>
+      <div class="section-viewport-track">
+        <div class="content-column content-column-wide">
+
+          <!-- About & Engineering Perspective Panel -->
+          <div class="glass-panel reveal-item">
+            <div class="eyebrow-row">
+              <span class="section-index">02</span>
+              <span class="eyebrow-divider"></span>
+              <h2 class="section-eyebrow">ABOUT &amp; BACKGROUND</h2>
+              <span class="perspective-tag">Full-Stack • Enterprise ITSM • Cloud</span>
+            </div>
+
+            <h3 class="section-title">
+              Bridging hardware discipline with modern software craft.
+            </h3>
+
+            <p class="section-lead">
+              From Electronics and Communication Engineering foundations to building production web platforms, Golang services, and enterprise ServiceNow solutions.
+            </p>
+
+            <div class="about-prose">
+              <p>
+                Motivated Electronics and Communication Engineer with 20 months of hands-on experience as a Software Developer and Associate Software Engineer. Adept at building scalable and efficient applications using modern technologies including ServiceNow (ITSM), Vue.js (Vuetify 2 &amp; 3), Nuxt.js, Golang, SQL, DynamoDB, Angular.js and AWS tools. Proven ability to deliver high-quality solutions in fast-paced environments, with a strong foundation in both frontend and backend development. Committed to continuous learning and contributing to innovative, cross-functional teams.
+              </p>
+              <p>
+                Whether designing a trade API load balancer and company holdings dashboard in Golang and Vue.js, or streamlining enterprise IT service delivery through ServiceNow workflows and custom widgets, I focus on clarity, scalability, and measurable reliability.
+              </p>
+            </div>
+
+            <!-- 4 Capabilities & Expertise Cards -->
+            <div id="capabilities-grid" class="capabilities-grid" aria-label="Capabilities and Expertise"></div>
+          </div>
+
+          <!-- Dedicated Education & Creative Interests Bento Row -->
+          <div class="education-activities-grid">
+            <article id="section-education" class="glass-panel education-card reveal-item">
+              <div class="eyebrow-row">
+                <span class="section-index">EDU</span>
+                <h4 class="section-eyebrow">EDUCATION — ACADEMIC FOUNDATION</h4>
+              </div>
+              <span class="edu-period-pill">2020 – 2024</span>
+              <h5 class="edu-degree">Bachelor of Engineering (Electronics and Communication Engineering)</h5>
+              <p class="edu-institution">Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College • Chennai</p>
+              <div class="edu-badges">
+                <span class="edu-badge-highlight">7.5 CGPA</span>
+                <span class="edu-badge-sub">Member of Department Innovation Cell</span>
+              </div>
+            </article>
+
+            <article class="glass-panel activities-card reveal-item">
+              <div class="eyebrow-row">
+                <span class="section-index">LIFE</span>
+                <h4 class="section-eyebrow">ACTIVITIES &amp; CREATIVE INTERESTS</h4>
+              </div>
+              <p class="activities-subtitle">Pursuits that inspire visual balance, endurance, and attention to detail</p>
+              <div id="activities-list" class="activities-grid"></div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 03 – PROFESSIONAL EXPERIENCE (Clip 3: Sits Down)
+         Desktop: Character on Right, Animated Glass Timeline on Left
+         ================================================ -->
+    <section id="section-experience" class="portfolio-section section-align-left" data-section-id="experience">
+      <div class="mobile-character-window" aria-hidden="true"></div>
+      <div class="section-viewport-track">
+        <div class="content-column content-column-wide">
+          <div class="glass-panel section-header-block reveal-item">
+            <div class="eyebrow-row">
+              <span class="section-index">03</span>
+              <span class="eyebrow-divider"></span>
+              <h2 class="section-eyebrow">CAREER PROGRESSION</h2>
+            </div>
+            <h3 class="section-title">Professional Experience.</h3>
+            <p class="section-lead">
+              20+ months of hands-on engineering across enterprise IT service management at Ensono Technologies and full-stack product engineering at Fortune Capitals.
+            </p>
+          </div>
+
+          <!-- Vertical Timeline populated from config.js -->
+          <div id="experience-timeline" class="experience-timeline" role="region" aria-label="Work Experience Timeline"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 04 – SELECTED PROJECTS (Clip 4: Desk Appears & Types)
+         Desktop: Character & White Desk on Left, Asymmetric Glass Showcase on Right
+         ================================================ -->
+    <section id="section-projects" class="portfolio-section section-align-right" data-section-id="projects">
+      <div class="mobile-character-window" aria-hidden="true"></div>
+      <div class="section-viewport-track">
+        <div class="content-column content-column-wide">
+          <div class="glass-panel section-header-block reveal-item">
+            <div class="eyebrow-row">
+              <span class="section-index">04</span>
+              <span class="eyebrow-divider"></span>
+              <h2 class="section-eyebrow">SELECTED WORK</h2>
+            </div>
+            <h3 class="section-title">Projects &amp; Systems Showcase.</h3>
+            <p class="section-lead">
+              Production systems, enterprise portals, API infrastructure, and academic engineering research delivered across my career.
+            </p>
+
+            <!-- Interactive Category Filters -->
+            <div id="project-filter-bar" class="filter-pills-bar" role="tablist" aria-label="Filter Projects by Category"></div>
+          </div>
+
+          <!-- Asymmetric 6-Project Showcase Grid populated from config.js -->
+          <div id="projects-grid" class="projects-asymmetric-grid" role="region" aria-label="Selected Projects"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 05 – TECHNICAL SKILLS (Clip 5: Stands & Walks Left)
+         Desktop: Character & Desk on Left, Filterable Glass Skill Matrix on Right
+         ================================================ -->
+    <section id="section-skills" class="portfolio-section section-align-right" data-section-id="skills">
+      <div class="mobile-character-window" aria-hidden="true"></div>
+      <div class="section-viewport-track">
+        <div class="content-column content-column-wide">
+          <div class="glass-panel section-header-block reveal-item">
+            <div class="eyebrow-row">
+              <span class="section-index">05</span>
+              <span class="eyebrow-divider"></span>
+              <h2 class="section-eyebrow">TECHNICAL STACK</h2>
+            </div>
+            <h3 class="section-title">Skills &amp; Technologies.</h3>
+            <p class="section-lead">
+              Production tools and platforms used across enterprise ITSM workflows, full-stack web portals, cloud serverless services, and web hosting.
+            </p>
+
+            <!-- Interactive Skill Category Filter Tabs -->
+            <div id="skills-filter-bar" class="filter-pills-bar" role="tablist" aria-label="Filter Skills by Domain"></div>
+          </div>
+
+          <!-- Detailed Glass Skill Cards populated from config.js -->
+          <div id="skills-categories-grid" class="skills-glass-grid" role="region" aria-label="Technical Skills"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         SECTION 06 – RÉSUMÉ & CONTACT (Clip 6: Pulls Down Screen & Waves)
+         Desktop: Character on Left-Center, Synchronized Résumé & Contact Panel on Right
+         ================================================ -->
+    <section id="section-contact" class="portfolio-section section-align-right" data-section-id="contact">
+      <div class="mobile-character-window" aria-hidden="true"></div>
+      <div class="section-viewport-track">
+        <div class="content-column content-column-wide">
+
+          <!-- Interactive Résumé Showcase Card -->
+          <div id="resume-pull-card" class="glass-panel resume-card-shell reveal-item" style="--pull-progress: 1">
+            <div class="resume-pull-handle" aria-hidden="true">
+              <span class="pull-handle-bar"></span>
+              <span class="pull-handle-caption">VERIFIED CURRICULUM VITAE — PROFESSIONAL SUMMARY</span>
+            </div>
+
+            <div class="resume-card-body">
+              <div class="resume-sheet-header">
+                <div>
+                  <h3 class="resume-sheet-name">Arun S</h3>
+                  <p class="resume-sheet-role">Associate Software Engineer &amp; Full-Stack Developer • Chennai, India</p>
+                  <p class="resume-sheet-meta">its.arun.s0503@gmail.com • +91 77080 94885 • linkedin.com/in/aruns9679</p>
+                </div>
+              </div>
+
+              <div class="resume-sheet-section">
+                <h4 class="resume-sheet-heading">Professional Summary</h4>
+                <p class="resume-sheet-text">
+                  Motivated Electronics and Communication Engineer with 20 months of hands-on experience as a Software Developer and Associate Software Engineer. Adept at building scalable and efficient applications using modern technologies including ServiceNow (ITSM), Vue.js (Vuetify 2 &amp; 3), Nuxt.js, Golang, SQL, DynamoDB, Angular.js and AWS tools. Proven ability to deliver high-quality solutions in fast-paced environments, with a strong foundation in both frontend and backend development. Committed to continuous learning and contributing to innovative, cross-functional teams.
+                </p>
+              </div>
+
+              <div class="resume-sheet-grid">
+                <div class="resume-sheet-section">
+                  <h4 class="resume-sheet-heading">Work Experience</h4>
+                  <ul class="resume-compact-list">
+                    <li>
+                      <strong>Associate Software Engineer</strong> — Ensono Technologies, Chennai
+                      <span class="resume-date-pill">DEC 2024 – PRESENT</span>
+                    </li>
+                    <li>
+                      <strong>Software Developer</strong> — Fortune Capitals Pvt Ltd, Chennai
+                      <span class="resume-date-pill">MAY 2024 – DEC 2024</span>
+                    </li>
+                    <li>
+                      <strong>Software Developer Intern</strong> — Fortune Capitals Pvt Ltd, Chennai
+                      <span class="resume-date-pill">FEB 2024 – APR 2024</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="resume-sheet-section">
+                  <h4 class="resume-sheet-heading">Education &amp; Capstone</h4>
+                  <p class="resume-sheet-text">
+                    <strong>B.E. (Electronics and Communication Engineering)</strong><br />
+                    Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College, Chennai<br />
+                    <span class="resume-date-pill">2020 – 2024</span> • <strong>7.5 CGPA</strong> • Member of Department Innovation Cell
+                  </p>
+                  <p class="resume-sheet-text resume-mt">
+                    <strong>Academic Project:</strong> Microstrip Antenna for Medical Imaging — Designed a microstrip antenna for enhanced resolution in medical imaging applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Get In Touch & Direct Mail Composer (from published website) -->
+          <div id="contact-card-panel" class="glass-panel contact-hero-card reveal-item">
+            <div class="eyebrow-row">
+              <span class="section-index">06</span>
+              <span class="eyebrow-divider"></span>
+              <h2 class="section-eyebrow">GET IN TOUCH</h2>
+            </div>
+
+            <h3 class="section-title">
+              Let’s build something impactful together.
+            </h3>
+
+            <p class="section-lead contact-lead">
+              Open to discussing software engineering roles, full-stack web architecture, Golang backend services, or enterprise ServiceNow ITSM solutions.
+            </p>
+
+            <div class="contact-details-grid">
+              <div class="contact-detail-item">
+                <div class="contact-detail-top">
+                  <span class="contact-detail-label">Email Address</span>
+                  <button type="button" class="copy-chip-btn" data-copy-text="its.arun.s0503@gmail.com">Copy</button>
+                </div>
+                <a href="mailto:its.arun.s0503@gmail.com" class="contact-detail-link">its.arun.s0503@gmail.com</a>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-top">
+                  <span class="contact-detail-label">Phone</span>
+                  <button type="button" class="copy-chip-btn" data-copy-text="+91 77080 94885">Copy</button>
+                </div>
+                <a href="tel:+917708094885" class="contact-detail-link">+91 77080 94885</a>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-top">
+                  <span class="contact-detail-label">Professional Network</span>
+                  <a href="https://www.linkedin.com/in/aruns9679" target="_blank" rel="noopener noreferrer" class="copy-chip-btn">Connect ↗</a>
+                </div>
+                <a href="https://www.linkedin.com/in/aruns9679" target="_blank" rel="noopener noreferrer" class="contact-detail-link">linkedin.com/in/aruns9679</a>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-top">
+                  <span class="contact-detail-label">Base Location</span>
+                  <span class="location-status-tag">Chennai, IN</span>
+                </div>
+                <strong class="contact-detail-value">Chennai, India</strong>
+                <span class="contact-detail-sub">Associate Software Engineer at Ensono Technologies</span>
+              </div>
+            </div>
+
+            <!-- Interactive Direct Message Composer (from published website) -->
+            <form id="contact-mail-form" class="contact-mail-form" aria-label="Send a Direct Message">
+              <h4 class="form-title">Send a Direct Message</h4>
+              <p class="form-subtitle">Fill out the fields below to open a pre-addressed message in your mail client.</p>
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label for="sender-name">Your Name *</label>
+                  <input type="text" id="sender-name" name="name" required placeholder="Enter your name" />
+                </div>
+                <div class="form-field">
+                  <label for="sender-email">Your Email</label>
+                  <input type="email" id="sender-email" name="email" placeholder="you@example.com" />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="sender-subject">Subject</label>
+                <input type="text" id="sender-subject" name="subject" placeholder="Software Engineering Opportunity / Collaboration" />
+              </div>
+              <div class="form-field">
+                <label for="sender-message">Message *</label>
+                <textarea id="sender-message" name="message" rows="3" required placeholder="Hello Arun, I'd love to connect regarding..."></textarea>
+              </div>
+              <div class="contact-cta-row">
+                <button type="submit" class="btn btn-primary">
+                  <span>Compose Email</span>
+                </button>
+                <a href="https://www.linkedin.com/in/aruns9679" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </form>
+          </div>
+
+          <!-- Clean Glass Footer -->
+          <footer class="glass-panel site-footer" role="contentinfo">
+            <div class="footer-brand-col">
+              <span class="brand-monogram">AS</span>
+              <div>
+                <strong class="footer-name">Arun S</strong>
+                <p class="footer-meta">Associate Software Engineer &amp; Full-Stack Developer • Chennai, India</p>
+              </div>
+            </div>
+            <div class="footer-links-row">
+              <p class="footer-copy">© 2026 Arun S. All rights reserved.</p>
+              <a href="#section-intro" data-scroll-to="intro" class="footer-top-link">Back to top ↑</a>
+            </div>
+          </footer>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/video-controller.js"></script>
+  <script src="js/scroll-controller.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

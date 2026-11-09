@@ -1,0 +1,209 @@
+/* ==========================================================================
+   RESPONSIVE ARCHITECTURE (css/responsive.css)
+   Desktop: Split Cinematic Composition
+   Tablet: Hybrid Full-Screen Video Stage + Floating Glass Panels
+   Mobile: Full-Screen 100vw × 100dvh Cinematic Video Background + Floating Glass Panels
+   with Dedicated Character Visibility Windows so the Face is NEVER Obstructed!
+   ========================================================================== */
+
+/* 1. Standard Laptop Viewports (1025px – 1440px) */
+@media (max-width: 1440px) {
+  .portfolio-section {
+    padding: 104px 36px 120px;
+  }
+
+  .content-column {
+    width: 46%;
+  }
+
+  .content-column-wide {
+    width: 49%;
+  }
+
+  .glass-panel {
+    padding: 34px 36px;
+  }
+}
+
+/* 2. Tablet & Mobile Viewports (<= 1024px) — Videos Hidden, Clean Atmospheric Glass Layout */
+@media (max-width: 1024px) {
+  .primary-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .stage-dots-nav {
+    display: none;
+  }
+
+  /* Hide Character Video Stage & Visibility Windows on Tablet and Mobile */
+  .video-stage,
+  .mobile-character-window {
+    display: none !important;
+  }
+
+  /* Reduce smoke blur & layers on tablet/mobile to preserve 60fps GPU performance */
+  .smoke-plume-4,
+  .smoke-plume-5 {
+    display: none;
+  }
+
+  .smoke-plume {
+    filter: blur(44px);
+    opacity: 0.52;
+  }
+
+  .portfolio-section,
+  #section-projects,
+  #section-contact {
+    min-height: auto;
+    flex-direction: column;
+    padding: 36px 28px 48px;
+  }
+
+  #section-intro {
+    min-height: auto;
+    flex-direction: column;
+    padding: 100px 28px 48px;
+  }
+
+  .section-align-left .section-viewport-track,
+  .section-align-right .section-viewport-track {
+    justify-content: center;
+  }
+
+  .content-column,
+  .content-column-wide {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  /* High-contrast translucent glass on tablet/mobile */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(20px) saturate(170%);
+    -webkit-backdrop-filter: blur(20px) saturate(170%);
+  }
+
+  .education-activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 3. Mobile Portrait Viewports (<= 640px: 430x932, 390x844, 375x812, 360x800) */
+@media (max-width: 640px) {
+  .floating-header {
+    top: 10px;
+    padding: 0 12px;
+  }
+
+  .floating-nav-shell {
+    height: 52px;
+    padding: 0 10px 0 14px;
+  }
+
+  .nav-cta-btn span {
+    display: none;
+  }
+
+  .nav-cta-btn {
+    padding: 8px 10px;
+  }
+
+  .portfolio-section,
+  #section-projects,
+  #section-contact {
+    padding: 24px 16px 36px;
+  }
+
+  #section-intro {
+    padding: 84px 16px 36px;
+  }
+
+  .glass-panel {
+    padding: 26px 22px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+  }
+
+  .hero-name {
+    font-size: 2.3rem;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+  }
+
+  .architecture-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .metrics-glass-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .capabilities-grid,
+  .activities-grid,
+  .projects-asymmetric-grid,
+  .skills-glass-grid,
+  .contact-details-grid,
+  .resume-sheet-grid,
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-wide {
+    grid-column: span 1;
+  }
+
+  .perspective-tag {
+    margin-left: 0;
+  }
+
+  .experience-timeline {
+    padding-left: 16px;
+  }
+
+  .timeline-card {
+    padding: 18px 16px;
+  }
+
+  .timeline-marker {
+    left: -24px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .resume-card-body {
+    padding: 20px 18px;
+  }
+
+  .contact-cta-row .btn {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .site-footer {
+    padding: 20px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-links-row {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid rgba(100, 120, 245, 0.14);
+  }
+}
